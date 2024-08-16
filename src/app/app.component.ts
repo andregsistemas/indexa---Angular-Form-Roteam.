@@ -14,16 +14,16 @@ interface Contato {
 }
 
 import agenda from './agenda.json'
-import { FormularioContatoComponent } from './paginas/formulario-contato/formulario-contato.component.spec';
+import { FormularioContatoComponent } from './paginas/formulario-contato/formulario-contato.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule, 
-    RouterOutlet, 
-    ContainerComponent, 
-    CabecalhoComponent, 
+    CommonModule,
+    RouterOutlet,
+    ContainerComponent,
+    CabecalhoComponent,
     SeparadorComponent,
     ContatoComponent,
     FormsModule,

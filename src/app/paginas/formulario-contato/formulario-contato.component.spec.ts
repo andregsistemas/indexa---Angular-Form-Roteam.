@@ -1,19 +1,23 @@
-import { Component } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { ContainerComponent } from "../../componentes/container/container.component";
-import { SeparadorComponent } from "../../componentes/separador/separador.component";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-@Component({
-  selector: 'app-formulario-contato',
-  standalone: true,
-  imports: [
-    CommonModule,
-    ContainerComponent,
-    SeparadorComponent
-  ],
-  templateUrl: './formulario-contato.component.html',
-  styleUrl: './formulario-contato.component.css'
-})
-export class FormularioContatoComponent{
+import { FormularioContatoComponent } from './formulario-contato.component';
 
-}
+describe('FormularioContatoComponent', () => {
+  let component: FormularioContatoComponent;
+  let fixture: ComponentFixture<FormularioContatoComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [FormularioContatoComponent]
+    })
+    .compileComponents();
+    
+    fixture = TestBed.createComponent(FormularioContatoComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
